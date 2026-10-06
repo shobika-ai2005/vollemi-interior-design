@@ -28,7 +28,7 @@ function Contact() {
       className={`contact ${isVisible ? "is-visible" : ""}`}
       id="contact"
     >
-      {/* Background word */}
+      {/* ================= BACKGROUND WORD ================= */}
       <div className="contact-bg-word">CONTACT</div>
 
       <div className="contact-container">
@@ -69,7 +69,7 @@ function Contact() {
         {/* ================= CONTENT ================= */}
         <div className="contact-content">
 
-          {/* LEFT SIDE */}
+          {/* ================= LEFT SIDE ================= */}
           <div className="contact-intro">
 
             <div className="contact-star">
@@ -89,9 +89,8 @@ function Contact() {
               <p>
                 Residential Interiors
                 <br />
-                Commercial Spaces
-                <br />
                 Turnkey Projects
+                <br />
               </p>
 
             </div>
@@ -99,29 +98,35 @@ function Contact() {
           </div>
 
 
-          {/* RIGHT SIDE */}
+          {/* ================= RIGHT SIDE ================= */}
           <div className="contact-details">
 
 
+            {/* ================= EMAIL ================= */}
             <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@vollemi.com&su=Interior%20Design%20Enquiry"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="contact-detail"
->
-  <div className="contact-detail-top">
-    <span>01</span>
-    <small>EMAIL</small>
-  </div>
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@vollemi.com&su=Interior%20Design%20Enquiry"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-detail"
+            >
 
-  <div className="contact-detail-main">
-    <h3>info@vollemi.com</h3>
-    <span className="contact-arrow">↗</span>
-  </div>
-</a>
+              <div className="contact-detail-top">
+                <span>01</span>
+                <small>EMAIL</small>
+              </div>
+
+              <div className="contact-detail-main">
+                <h3>info@vollemi.com</h3>
+
+                <span className="contact-arrow">
+                  ↗
+                </span>
+              </div>
+
+            </a>
 
 
-            {/* WHATSAPP */}
+            {/* ================= WHATSAPP ================= */}
             <a
               href="https://wa.me/919159858631"
               target="_blank"
@@ -135,33 +140,38 @@ function Contact() {
               </div>
 
               <div className="contact-detail-main">
-                <h3>+91 91598 58631</h3>
+
+                {/* PHONE NUMBER */}
+                <h3 className="contact-phone">
+                  +91 91598 58631
+                </h3>
 
                 <span className="contact-arrow">
                   ↗
                 </span>
+
               </div>
 
             </a>
 
 
-           {/* LOCATION */}
-<div className="contact-detail contact-detail-location">
+            {/* ================= LOCATION ================= */}
+            <div className="contact-detail contact-detail-location">
 
-  <div className="contact-detail-top">
-    <span>03</span>
-    <small>LOCATIONS</small>
-  </div>
+              <div className="contact-detail-top">
+                <span>03</span>
+                <small>LOCATIONS</small>
+              </div>
 
-  <div className="contact-detail-main">
-    <h3>
-      Nagercoil · Hosur · Bangalore
-    </h3>
+              <div className="contact-detail-main">
 
+                <h3>
+                  Bangaloer . Hosur . Nagercoil
+                </h3>
 
-  </div>
+              </div>
 
-</div>
+            </div>
 
           </div>
 
@@ -177,16 +187,15 @@ function Contact() {
 
           <div className="contact-social-links">
 
-  <a
-  href="https://www.instagram.com/vollemi_interio?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Instagram
-  <span>↗</span>
-</a>
+            <a
+              href="https://www.instagram.com/vollemi_interio?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+              <span>↗</span>
+            </a>
 
-            
           </div>
 
         </div>
@@ -204,6 +213,7 @@ function Contact() {
           </p>
 
 
+          {/* ================= BOTTOM ================= */}
           <div className="contact-statement-bottom">
 
             <span>

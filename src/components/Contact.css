@@ -6,6 +6,7 @@
   padding: 150px 0 130px;
 }
 
+
 /* =========================================
    BACKGROUND WORD
 ========================================= */
@@ -15,11 +16,15 @@
   top: 8%;
   left: 50%;
   transform: translateX(-50%);
+
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(150px, 25vw, 360px);
   line-height: 1;
+
   white-space: nowrap;
+
   color: rgba(38, 51, 33, 0.025);
+
   pointer-events: none;
   user-select: none;
 }
@@ -32,6 +37,7 @@
 .contact-container {
   position: relative;
   z-index: 2;
+
   width: min(1280px, 90%);
   margin: 0 auto;
 }
@@ -202,6 +208,7 @@
   font-family: Georgia, "Times New Roman", serif;
   font-size: 21px;
   line-height: 1.55;
+
   color: #263321;
 }
 
@@ -216,19 +223,24 @@
 .contact-availability span {
   display: block;
   margin-bottom: 15px;
+
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   letter-spacing: 2.5px;
+
   color: #b08d57;
 }
 
 .contact-availability p {
   margin: 0;
+
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 2;
+
   color: rgba(38, 51, 33, .65);
 }
+
 
 /* =========================================
    CONTACT DETAILS
@@ -272,6 +284,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8px;
   letter-spacing: 2px;
+
   color: #b08d57;
 }
 
@@ -280,6 +293,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8px;
   letter-spacing: 2.5px;
+
   color: rgba(38, 51, 33, .45);
 }
 
@@ -288,9 +302,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 30px;
 }
 
+
+/* =========================================
+   EMAIL + LOCATION FONT
+========================================= */
 
 .contact-detail-main h3 {
   margin: 0;
@@ -308,6 +327,38 @@
   color: #556b3f;
 }
 
+
+/* =========================================
+   PHONE NUMBER ONLY
+========================================= */
+
+.contact-phone {
+  font-family: Arial, Helvetica, sans-serif !important;
+
+  font-size: clamp(27px, 3vw, 42px) !important;
+
+  font-weight: 500 !important;
+
+  letter-spacing: -1px;
+
+  color: #263321;
+
+  line-height: 1.1;
+
+  transition:
+    color .4s ease,
+    transform .4s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.contact-detail:hover .contact-phone {
+  color: #556b3f;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
 
 .contact-arrow {
   width: 44px;
@@ -346,6 +397,7 @@
   font-size: 9px;
   letter-spacing: 1px;
   line-height: 1.6;
+
   color: rgba(38, 51, 33, .45);
 }
 
@@ -383,6 +435,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8px;
   letter-spacing: 2.5px;
+
   color: rgba(38, 51, 33, .45);
 }
 
@@ -472,6 +525,7 @@
 .contact-statement-line {
   width: 100%;
   height: 1px;
+
   background: #263321;
 }
 
@@ -508,6 +562,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8px;
   letter-spacing: 2.5px;
+
   color: rgba(38, 51, 33, .45);
 }
 
@@ -563,23 +618,30 @@
     padding: 110px 0 100px;
   }
 
+
   .contact-heading {
     margin-top: 90px;
   }
 
+
   .contact-content {
     grid-template-columns: 1fr;
+
     gap: 75px;
+
     margin-top: 90px;
   }
+
 
   .contact-intro {
     max-width: 500px;
   }
 
+
   .contact-social-row {
     margin-top: 75px;
   }
+
 
   .contact-statement {
     margin-top: 90px;
@@ -598,26 +660,32 @@
     padding: 90px 0 80px;
   }
 
+
   .contact-container {
     width: 88%;
   }
+
 
   .contact-bg-word {
     top: 15%;
     font-size: 100px;
   }
 
+
   .contact-top-right {
     display: none;
   }
+
 
   .contact-heading {
     margin-top: 70px;
   }
 
+
   .contact-eyebrow {
     margin-bottom: 20px;
   }
+
 
   .contact-heading h2 {
     font-size: 48px;
@@ -625,49 +693,73 @@
     line-height: .98;
   }
 
+
   .contact-content {
     margin-top: 70px;
     padding-top: 35px;
     gap: 65px;
   }
 
+
   .contact-intro-text {
     font-size: 18px;
     line-height: 1.6;
   }
 
+
   .contact-availability {
     margin-top: 50px;
   }
+
 
   .contact-detail {
     padding: 25px 0;
   }
 
+
+  /* EMAIL + LOCATION ON MOBILE */
   .contact-detail-main h3 {
     font-size: 25px;
   }
 
+
+  /* PHONE NUMBER ON MOBILE */
+  .contact-detail-main .contact-phone {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.5px;
+  }
+
+
   .contact-arrow {
     width: 38px;
     height: 38px;
+
     flex-shrink: 0;
   }
 
+
   .contact-social-row {
     margin-top: 65px;
+
     display: block;
   }
 
+
   .contact-social-links {
     margin-top: 25px;
+
     gap: 25px;
+
     flex-wrap: wrap;
   }
+
 
   .contact-statement {
     margin-top: 75px;
   }
+
 
   .contact-statement > p {
     margin: 35px 0 45px;
@@ -677,12 +769,15 @@
     line-height: .9;
   }
 
+
   .contact-statement-bottom {
     display: block;
   }
 
+
   .contact-statement-bottom a {
     margin-top: 25px;
+
     justify-content: space-between;
   }
 
@@ -698,6 +793,7 @@
   .contact-star {
     animation: none;
   }
+
 
   .contact-top,
   .contact-heading,

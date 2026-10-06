@@ -46,7 +46,8 @@ function About() {
           </div>
 
           <div className="about-header-note">
-            INTERIORS WITH<br />
+            INTERIORS WITH
+            <br />
             INTENTION
           </div>
         </div>
@@ -76,7 +77,10 @@ function About() {
             <div className="about-image-frame"></div>
 
             <div className="about-image-wrap">
-              <img src={aboutImage} alt="Vollemi Interior Design" />
+              <img
+                src={aboutImage}
+                alt="Vollemi Interior Design"
+              />
 
               <div className="about-image-overlay"></div>
 
@@ -108,24 +112,23 @@ function About() {
 
             <div className="about-copy">
               <p>
-                Vollemi is an interior design studio driven by the belief
-                that beautiful spaces should feel personal, purposeful,
-                and timeless.
+                Vollemi is an interior design studio shaped by the belief
+                that the most beautiful spaces are the ones that feel
+                deeply personal.
               </p>
 
               <p>
-                From refined residential interiors to thoughtful
-                commercial spaces, we bring together architecture,
-                materials, light, colour, and craftsmanship to create
-                environments made to be lived in.
+                We thoughtfully bring together form, texture, light, colour,
+                and craftsmanship to create interiors that are not simply
+                designed to be seen, but spaces designed to be felt, lived in,
+                and remembered.
               </p>
             </div>
-
-        
 
             {/* Floating detail */}
             <div className="about-detail">
               <span className="detail-line"></span>
+
               <div>
                 <strong>EST. 2026</strong>
                 <small>INTERIOR DESIGN STUDIO</small>
@@ -152,22 +155,30 @@ function About() {
         <div className="about-marquee-track">
           <span>DESIGN</span>
           <i>✦</i>
+
           <span>CRAFT</span>
           <i>✦</i>
+
           <span>DETAIL</span>
           <i>✦</i>
+
           <span>TIMELESS</span>
           <i>✦</i>
+
           <span>DESIGN</span>
           <i>✦</i>
+
           <span>CRAFT</span>
           <i>✦</i>
+
           <span>DETAIL</span>
           <i>✦</i>
+
           <span>TIMELESS</span>
           <i>✦</i>
         </div>
       </div>
+
     </section>
   );
 }

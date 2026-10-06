@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./Projects.css";
 
-import PROJECT1 from "../assets/PROJECT1.jfif";
+import WOODLINE from "../assets/woodline.jfif";
 import PROJECT2 from "../assets/PROJECT2.jfif";
 import PROJECT3 from "../assets/PROJECT3.jfif";
 import PROJECT4 from "../assets/PROJECT4.jfif";
@@ -10,6 +10,10 @@ function Projects() {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+
+  /* =========================================
+     SECTION VISIBILITY
+  ========================================= */
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,17 +32,20 @@ function Projects() {
     return () => observer.disconnect();
   }, []);
 
+  /* =========================================
+     PROJECT DATA
+  ========================================= */
+
   const projects = [
     {
       number: "01",
       title: "The Woodline Residence",
       category: "RESIDENTIAL INTERIORS",
-      image: PROJECT1,
+      image: WOODLINE,
       description:
-        "A warm residential interior shaped by natural wood, soft textures, muted tones, and effortless everyday comfort.",
+        "A warm tropical residence where traditional timber craftsmanship, natural textures, and contemporary comfort come together.",
     },
 
-    // PROJECT 2 NOW USES PROJECT3 IMAGE
     {
       number: "02",
       title: "The Marble House",
@@ -48,10 +55,9 @@ function Projects() {
         "A refined contemporary home where marble, architectural forms, and subtle details create a timeless sense of luxury.",
     },
 
-    // PROJECT 3 NOW USES PROJECT2 IMAGE
     {
       number: "03",
-      title: "The Modern Kitchen",
+      title: "The Modular Kitchen",
       category: "KITCHEN DESIGN",
       image: PROJECT2,
       description:
@@ -68,12 +74,20 @@ function Projects() {
     },
   ];
 
+  /* =========================================
+     OPEN PROJECT
+  ========================================= */
+
   const openProject = (index) => {
     setSelectedProject(index);
 
     document.body.style.overflow = "hidden";
     document.body.classList.add("project-modal-open");
   };
+
+  /* =========================================
+     CLOSE PROJECT
+  ========================================= */
 
   const closeProject = () => {
     setSelectedProject(null);
@@ -82,17 +96,29 @@ function Projects() {
     document.body.classList.remove("project-modal-open");
   };
 
+  /* =========================================
+     NEXT PROJECT
+  ========================================= */
+
   const nextProject = () => {
     setSelectedProject((current) =>
       current === projects.length - 1 ? 0 : current + 1
     );
   };
 
+  /* =========================================
+     PREVIOUS PROJECT
+  ========================================= */
+
   const previousProject = () => {
     setSelectedProject((current) =>
       current === 0 ? projects.length - 1 : current - 1
     );
   };
+
+  /* =========================================
+     KEYBOARD CONTROLS
+  ========================================= */
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -121,9 +147,9 @@ function Projects() {
 
   return (
     <>
-      {/* =========================
+      {/* =========================================
           PROJECTS SECTION
-      ========================== */}
+      ========================================== */}
 
       <section
         ref={sectionRef}
@@ -135,9 +161,9 @@ function Projects() {
 
         <div className="projects-container">
 
-          {/* =========================
+          {/* =========================================
               TOP HEADER
-          ========================== */}
+          ========================================== */}
 
           <div className="projects-top">
             <div className="projects-label">
@@ -151,9 +177,9 @@ function Projects() {
             </p>
           </div>
 
-          {/* =========================
+          {/* =========================================
               MAIN HEADING
-          ========================== */}
+          ========================================== */}
 
           <div className="projects-heading">
 
@@ -179,9 +205,9 @@ function Projects() {
             </div>
           </div>
 
-          {/* =========================
+          {/* =========================================
               INTRO
-          ========================== */}
+          ========================================== */}
 
           <div className="projects-intro">
 
@@ -195,9 +221,9 @@ function Projects() {
 
           </div>
 
-          {/* =========================
+          {/* =========================================
               PROJECT GRID
-          ========================== */}
+          ========================================== */}
 
           <div className="projects-grid">
 
@@ -277,9 +303,9 @@ function Projects() {
 
           </div>
 
-          {/* =========================
+          {/* =========================================
               BOTTOM STATEMENT
-          ========================== */}
+          ========================================== */}
 
           <div className="projects-footer">
 
@@ -301,7 +327,7 @@ function Projects() {
               href="#contact"
               className="projects-footer-button"
             >
-              <span>START A PROJECT</span>
+              <span>GET A QUOTATION</span>
 
               <span>↗</span>
             </a>
@@ -311,9 +337,9 @@ function Projects() {
         </div>
       </section>
 
-      {/* =========================
+      {/* =========================================
           PROJECT MODAL
-      ========================== */}
+      ========================================== */}
 
       {selectedProject !== null && (
 
